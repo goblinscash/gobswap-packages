@@ -77,7 +77,7 @@ const ID_TO_CHAIN_ID = (id) => {
             return sdk_core_1.ChainId.BASE;
         case 84531:
             return sdk_core_1.ChainId.BASE_GOERLI;
-        case 10001:
+        case 10000:
             return sdk_core_1.ChainId.SMARTBCH;
         default:
             throw new Error(`Unknown chain id: ${id}`);
@@ -240,7 +240,7 @@ const ID_TO_NETWORK_NAME = (id) => {
             return ChainName.BASE;
         case 84531:
             return ChainName.BASE_GOERLI;
-        case 10001:
+        case 10000:
             return ChainName.SMARTBCH;
         default:
             throw new Error(`Unknown chain id: ${id}`);
