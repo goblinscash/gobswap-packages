@@ -7,7 +7,7 @@ src/**.js
 coverage
 *.log
 yarn.lock
-types
-types/*
+src/types
+src/types/*
 .env
 cache/
