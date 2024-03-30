@@ -154,13 +154,13 @@ const BASE_GOERLI_ADDRESSES: ChainAddresses = {
 }
 // SmartBCH addresses
 const SMARTBCH_ADDRESSES: ChainAddresses = {
-  v3CoreFactoryAddress: '0xcE181b41E298cEb3aC040f74aE08a83cf327267B',
-  multicallAddress: '0x00C52c6FDA8e6b2712cE02AF40e4Aa7ff2E94262',
-  quoterAddress: '0x40B73bBD6e758E78F7Ff327576396D0aCcC9Bd71',
-  v3MigratorAddress: '0x296792760D02F3Ff6439a16071971f8Ff82C9f6d',
-  nonfungiblePositionManagerAddress: '0xBB4d2559D2c3f31Cd9965333BFe967DDAbE1a0F5',
-  tickLensAddress: '0xB51045c005807EafB1A290471daa928eaa8C7724',
-  swapRouter02Address: '0xF7ada1e05ea25257d3d9e60477C9912E055f190B'
+  v3CoreFactoryAddress: '0x08153648C209644a68ED4DC0aC06795F6563D17b',
+  multicallAddress: '0xa90A27ce7a296E232D13C3A02935DF59c3C6b56E',
+  quoterAddress: '0xA2F2aB5B5Fd9d9f70376b460eeb422A1BD63f3ca',
+  v3MigratorAddress: '0xeCBE75fE3b2C8485AB8652Cc9Ae6AF1dA46036fE',
+  nonfungiblePositionManagerAddress: '0x6Cf824f9556cEdE40710AD25BC26fd47f7063944',
+  tickLensAddress: '0xFe1d1Bb561e8147210f5a1191d7A179DC698E26f',
+  swapRouter02Address: '0x400FF3e349100d953eB5531FD050E70481d58469'
 }
 
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {

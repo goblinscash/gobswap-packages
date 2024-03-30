@@ -16,7 +16,7 @@ export declare enum ChainId {
     AVALANCHE = 43114,
     BASE_GOERLI = 84531,
     BASE = 8453,
-    SMARTBCH = 10001
+    SMARTBCH = 10000
 }
 export declare const SUPPORTED_CHAINS: readonly [ChainId.MAINNET, ChainId.OPTIMISM, ChainId.OPTIMISM_GOERLI, ChainId.ARBITRUM_ONE, ChainId.ARBITRUM_GOERLI, ChainId.POLYGON, ChainId.POLYGON_MUMBAI, ChainId.GOERLI, ChainId.SEPOLIA, ChainId.CELO_ALFAJORES, ChainId.CELO, ChainId.BNB, ChainId.AVALANCHE, ChainId.BASE, ChainId.BASE_GOERLI, ChainId.SMARTBCH];
 export declare type SupportedChainsType = typeof SUPPORTED_CHAINS[number];

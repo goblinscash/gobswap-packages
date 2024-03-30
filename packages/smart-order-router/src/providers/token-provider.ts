@@ -482,7 +482,7 @@ export const USDC_BASE_GOERLI = new Token(
 //TODO: change the address for mainnet
 export const USDT_SBCH = new Token(
   ChainId.SMARTBCH,
-  '0x96917995f030f8fC3D8fDF40F3a6422547c877c1',
+  '0xBc2F884680c95A02cea099dA2F524b366d9028Ba',
   18,
   'bcUSDT',
   'bcUSDT'

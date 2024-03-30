@@ -99,11 +99,11 @@ const CHAIN_CONFIGS: { [key: number]: ChainConfig } = {
     weth: '0x4200000000000000000000000000000000000006',
     creationBlock: 3229053,
   },
-  // smartbch testnet
-  [10001]: {
-    router: '0x7c66950b688f535353b08E04cF76666d46Ae0D61',
-    weth: WETH_NOT_SUPPORTED_ON_CHAIN,
-    creationBlock: 14510429,
+  // smartbch mainnet
+  [10000]: {
+    router: '0x23a9379Eab50cf0d66a843082792474b6afA5AEF',
+    weth: '0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04',
+    creationBlock: 14474678,
   },
 }
 
