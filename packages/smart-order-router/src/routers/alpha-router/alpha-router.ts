@@ -556,7 +556,6 @@ export class AlphaRouter
           break;
         case ChainId.CELO:
         case ChainId.CELO_ALFAJORES:
-        case ChainId.SMARTBCH:
           this.onChainQuoteProvider = new OnChainQuoteProvider(
             chainId,
             provider,
@@ -569,6 +568,31 @@ export class AlphaRouter
             {
               multicallChunk: 10,
               gasLimitPerCall: 5_000_000,
+              quoteMinSuccessRate: 0.1,
+            },
+            {
+              gasLimitOverride: 5_000_000,
+              multicallChunk: 5,
+            },
+            {
+              gasLimitOverride: 6_250_000,
+              multicallChunk: 4,
+            }
+          );
+          break;
+        case ChainId.SMARTBCH:
+          this.onChainQuoteProvider = new OnChainQuoteProvider(
+            chainId,
+            provider,
+            this.multicall2Provider,
+            {
+              retries: 2,
+              minTimeout: 100,
+              maxTimeout: 1000,
+            },
+            {
+              multicallChunk: 10,
+              gasLimitPerCall: 1_000_000,
               quoteMinSuccessRate: 0.1,
             },
             {
@@ -1131,37 +1155,43 @@ export class AlphaRouter
       );
     }
 
-    // let swapRouteFromChainPromise: Promise<BestSwapRoute | null> = Promise.resolve(null);
-    // if (!cachedRoutes || cacheMode !== CacheMode.Livemode) {
-    //   swapRouteFromChainPromise = this.getSwapRouteFromChain(
-    //     amount,
-    //     tokenIn,
-    //     tokenOut,
-    //     protocols,
-    //     quoteToken,
-    //     tradeType,
-    //     routingConfig,
-    //     v3GasModel,
-    //     mixedRouteGasModel,
-    //     gasPriceWei,
-    //     swapConfig
-    //   );
-    // }
+    let swapRouteFromChainPromise: Promise<BestSwapRoute | null> = Promise.resolve(null);
+    if (!cachedRoutes || cacheMode !== CacheMode.Livemode) {
+      swapRouteFromChainPromise = this.getSwapRouteFromChain(
+        amount,
+        tokenIn,
+        tokenOut,
+        protocols,
+        quoteToken,
+        tradeType,
+        routingConfig,
+        v3GasModel,
+        mixedRouteGasModel,
+        gasPriceWei,
+        swapConfig
+      );
+    }
 
-    const swapRouteFromCache = await swapRouteFromCachePromise;
-    const swapRouteFromChain = await this.getSwapRouteFromChain(
-      amount,
-      tokenIn,
-      tokenOut,
-      protocols,
-      quoteToken,
-      tradeType,
-      routingConfig,
-      v3GasModel,
-      mixedRouteGasModel,
-      gasPriceWei,
-      swapConfig
-    );;
+  //   const swapRouteFromCache = await swapRouteFromCachePromise;
+  //   const swapRouteFromChain = await this.getSwapRouteFromChain(
+  //     amount,
+  //     tokenIn,
+  //     tokenOut,
+  //     protocols,
+  //     quoteToken,
+  //     tradeType,
+  //     routingConfig,
+  //     v3GasModel,
+  //     mixedRouteGasModel,
+  //     gasPriceWei,
+  //     swapConfig
+  //   );;
+  // );
+
+    const [swapRouteFromCache, swapRouteFromChain] = await Promise.all([
+      swapRouteFromCachePromise,
+      swapRouteFromChainPromise
+    ]);
 
     let swapRouteRaw: BestSwapRoute | null;
     let hitsCachedRoute = false;

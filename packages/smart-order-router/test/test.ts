@@ -46,7 +46,7 @@ const tokenOut = new Token(
 )
 
 
-var amount = parseAmount('1', tokenIn);
+var amount = parseAmount('100', tokenIn);
 router.route(amount, tokenOut, TradeType.EXACT_INPUT, undefined, { protocols: [Protocol.V2, Protocol.V3] })
   .then(routes => {
     console.log(JSON.stringify(routes));
