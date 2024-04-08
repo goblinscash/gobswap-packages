@@ -30,14 +30,14 @@ var router = new AlphaRouter({ chainId: ChainId.SMARTBCH, provider });
 //   }
 // }
 // const tokenIn = new SbchNativeCurrency(ChainId.SMARTBCH);
-const tokenIn = new Token(
+const bcUSDT = new Token(
   ChainId.SMARTBCH,
   '0xbc2f884680c95a02cea099da2f524b366d9028ba',
   18,
   'bcUSDT',
   'bcUSDT'
 )
-const tokenOut = new Token(
+const bcBCH = new Token(
   ChainId.SMARTBCH,
   '0xbc9bd8dde6c5a8e1cbe293356e02f5984693b195',
   18,
@@ -45,8 +45,10 @@ const tokenOut = new Token(
   'bcBCH'
 )
 
+const tokenIn = bcBCH
+const tokenOut = bcUSDT
 
-var amount = parseAmount('100', tokenIn);
+var amount = parseAmount('1000', tokenIn);
 router.route(amount, tokenOut, TradeType.EXACT_INPUT, undefined, { protocols: [Protocol.V2, Protocol.V3] })
   .then(routes => {
     console.log(JSON.stringify(routes));
