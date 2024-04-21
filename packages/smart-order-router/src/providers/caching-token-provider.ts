@@ -24,6 +24,7 @@ import {
   DAI_OPTIMISM_GOERLI,
   DAI_POLYGON_MUMBAI,
   ETH_BNB,
+  GOB,
   ITokenProvider,
   TokenAccessor,
   USDC_ARBITRUM,
@@ -148,6 +149,7 @@ export const CACHE_SEED_TOKENS: {
   },
   [ChainId.SMARTBCH]: {
     USDT: USDT_SBCH,
+    GOB: GOB,
     BCBCH: BC_BCH,
     WBCH: WRAPPED_NATIVE_CURRENCY[ChainId.SMARTBCH],
   }

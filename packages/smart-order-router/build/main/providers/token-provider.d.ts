@@ -80,6 +80,7 @@ export declare const USDC_AVAX: Token;
 export declare const USDC_BASE: Token;
 export declare const USDC_BASE_GOERLI: Token;
 export declare const USDT_SBCH: Token;
+export declare const GOB: Token;
 export declare const USDC_ETHEREUM_GNOSIS: Token;
 export declare const WXDAI_GNOSIS: Token;
 export declare const WBTC_GNOSIS: Token;

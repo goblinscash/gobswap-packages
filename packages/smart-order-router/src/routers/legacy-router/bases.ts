@@ -1,3 +1,4 @@
+import { GOB } from './../../providers/token-provider';
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { ChainId, Token } from '@uniswap/sdk-core';
 
@@ -64,7 +65,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST = (
     [ChainId.AVALANCHE]: [WRAPPED_NATIVE_CURRENCY[ChainId.AVALANCHE]!, USDC_AVAX, DAI_AVAX],
     [ChainId.BASE]: [WRAPPED_NATIVE_CURRENCY[ChainId.BASE]!, USDC_BASE],
     [ChainId.BASE_GOERLI]: [WRAPPED_NATIVE_CURRENCY[ChainId.BASE_GOERLI]!],
-    [ChainId.SMARTBCH]: [WRAPPED_NATIVE_CURRENCY[ChainId.SMARTBCH]!, BC_BCH],
+    [ChainId.SMARTBCH]: [GOB, WRAPPED_NATIVE_CURRENCY[ChainId.SMARTBCH]!, BC_BCH],
   };
 };
 

@@ -487,6 +487,13 @@ export const USDT_SBCH = new Token(
   'bcUSDT',
   'bcUSDT'
 )
+export const GOB = new Token(
+  ChainId.SMARTBCH,
+  '0x56381cB87C8990971f3e9d948939e1a95eA113a3',
+  9,
+  'GOB',
+  'GOB'
+)
 
 // Gnosis Tokens
 export const USDC_ETHEREUM_GNOSIS = new Token(

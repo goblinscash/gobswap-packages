@@ -1,3 +1,4 @@
+import { GOB } from './../token-provider';
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { ChainId, Token } from '@uniswap/sdk-core';
 import { FeeAmount, Pool } from '@uniswap/v3-sdk';
@@ -155,7 +156,7 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ],
   [ChainId.BASE_GOERLI]: [WRAPPED_NATIVE_CURRENCY[ChainId.BASE_GOERLI]],
   [ChainId.BASE]: [WRAPPED_NATIVE_CURRENCY[ChainId.BASE], USDC_BASE],
-  [ChainId.SMARTBCH]: [BC_BCH, WRAPPED_NATIVE_CURRENCY[ChainId.SMARTBCH]],
+  [ChainId.SMARTBCH]: [GOB, BC_BCH, WRAPPED_NATIVE_CURRENCY[ChainId.SMARTBCH]],
 };
 
 /**
