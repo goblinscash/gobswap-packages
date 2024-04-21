@@ -5,6 +5,7 @@ import _ from 'lodash';
 
 import { ITokenListProvider, IV2SubgraphProvider, V2SubgraphPool, } from '../../../providers';
 import {
+  BC_BCH,
   CELO,
   CELO_ALFAJORES,
   CEUR_CELO,
@@ -172,6 +173,9 @@ const baseTokensByChain: { [chainId in ChainId]?: Token[] } = {
   [ChainId.BASE]: [
     USDC_BASE,
   ],
+  [ChainId.SMARTBCH]: [
+    BC_BCH
+  ]
 };
 
 class SubcategorySelectionPools<SubgraphPool> {

@@ -5,6 +5,7 @@ import { log, WRAPPED_NATIVE_CURRENCY } from '../util';
 
 import { ICache } from './cache';
 import {
+  BC_BCH,
   BTC_BNB,
   BUSD_BNB,
   CELO,
@@ -42,6 +43,7 @@ import {
   USDT_MAINNET,
   USDT_OPTIMISM,
   USDT_OPTIMISM_GOERLI,
+  USDT_SBCH,
   WBTC_ARBITRUM,
   WBTC_MAINNET,
   WBTC_MOONBEAM,
@@ -143,6 +145,11 @@ export const CACHE_SEED_TOKENS: {
   [ChainId.BASE]: {
     USDC: USDC_BASE,
     WETH: WRAPPED_NATIVE_CURRENCY[ChainId.BASE],
+  },
+  [ChainId.SMARTBCH]: {
+    USDT: USDT_SBCH,
+    BCBCH: BC_BCH,
+    WBCH: WRAPPED_NATIVE_CURRENCY[ChainId.SMARTBCH],
   }
   // Currently we do not have providers for Moonbeam mainnet or Gnosis testnet
 };

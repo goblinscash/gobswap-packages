@@ -10,6 +10,7 @@ import { log } from '../../util/log';
 import { ProviderConfig } from '../provider';
 import {
   ARB_ARBITRUM,
+  BC_BCH,
   BTC_BNB,
   BUSD_BNB,
   CELO,
@@ -154,7 +155,7 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ],
   [ChainId.BASE_GOERLI]: [WRAPPED_NATIVE_CURRENCY[ChainId.BASE_GOERLI]],
   [ChainId.BASE]: [WRAPPED_NATIVE_CURRENCY[ChainId.BASE], USDC_BASE],
-  [ChainId.SMARTBCH]: [WRAPPED_NATIVE_CURRENCY[ChainId.SMARTBCH]],
+  [ChainId.SMARTBCH]: [BC_BCH, WRAPPED_NATIVE_CURRENCY[ChainId.SMARTBCH]],
 };
 
 /**

@@ -260,3 +260,5 @@ This total amount of gas each `eth_call` can consume is equal to the `multicallC
 If you are running your own node, we recommend you configure start your node with a higher gas limit per call. For example, on Geth you can use the command line argument `--rpc.gascap 150000000` to raise the limit to 150m, which is enough to run the default configuration of this package.
 
 If you are using Hardhat mainnet forking, you should add `blockGasLimit: 150_000_000` to your Hardhat config to use the default package configuration.
+
+http://127.0.0.1:8000/subgraphs/name/goblincash/uniswap-v3/graphql

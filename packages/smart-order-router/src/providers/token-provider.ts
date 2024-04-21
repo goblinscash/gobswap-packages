@@ -546,6 +546,15 @@ export const WBTC_MOONBEAM = new Token(
   'Wrapped BTC bridged using Multichain'
 );
 
+// FOR SMARTBCH
+export const BC_BCH = new Token(
+  ChainId.SMARTBCH,
+  '0xbc9bd8dde6c5a8e1cbe293356e02f5984693b195',
+  18,
+  'bcBCH',
+  'bcBCH'
+)
+
 export class TokenProvider implements ITokenProvider {
   constructor(
     private chainId: ChainId,

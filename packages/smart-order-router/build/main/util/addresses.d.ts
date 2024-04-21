@@ -3,6 +3,7 @@ export declare const BNB_TICK_LENS_ADDRESS: string | undefined;
 export declare const BNB_NONFUNGIBLE_POSITION_MANAGER_ADDRESS: string | undefined;
 export declare const BNB_SWAP_ROUTER_02_ADDRESS: string;
 export declare const BNB_V3_MIGRATOR_ADDRESS: string | undefined;
+export declare const BCH_SWAP_ROUTER_02_ADDRESS: string;
 export declare const V3_CORE_FACTORY_ADDRESSES: AddressMap;
 export declare const QUOTER_V2_ADDRESSES: AddressMap;
 export declare const MIXED_ROUTE_QUOTER_V1_ADDRESSES: AddressMap;

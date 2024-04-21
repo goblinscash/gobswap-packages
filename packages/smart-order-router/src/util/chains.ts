@@ -573,6 +573,27 @@ class AvalancheNativeCurrency extends NativeCurrency {
   }
 }
 
+// IS BCH NATIVE
+function isSbch(chainId: number): chainId is ChainId.SMARTBCH {
+  return chainId === ChainId.SMARTBCH
+}
+class SbchNativeCurrency extends NativeCurrency {
+  equals(other: Currency): boolean {
+    return other.isNative && other.chainId === this.chainId
+  }
+
+  get wrapped(): Token {
+    if (!isSbch(this.chainId)) throw new Error('Not SBCH')
+    const wrapped = WRAPPED_NATIVE_CURRENCY[this.chainId]
+    return wrapped
+  }
+
+  public constructor(chainId: number) {
+    if (!isSbch(chainId)) throw new Error('Not SBCH')
+    super(chainId, 18, 'BCH', 'BCH')
+  }
+}
+
 export class ExtendedEther extends Ether {
   public get wrapped(): Token {
     if (this.chainId in WRAPPED_NATIVE_CURRENCY) {
@@ -610,6 +631,8 @@ export function nativeOnChain(chainId: number): NativeCurrency {
     cachedNativeCurrency[chainId] = new BnbNativeCurrency(chainId);
   } else if (isAvax(chainId)) {
     cachedNativeCurrency[chainId] = new AvalancheNativeCurrency(chainId);
+  } else if (isSbch(chainId)) {
+    cachedNativeCurrency[chainId] = new SbchNativeCurrency(chainId)
   } else {
     cachedNativeCurrency[chainId] = ExtendedEther.onChain(chainId);
   }

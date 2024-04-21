@@ -9,6 +9,8 @@ export const BNB_NONFUNGIBLE_POSITION_MANAGER_ADDRESS = CHAIN_TO_ADDRESSES_MAP[C
 export const BNB_SWAP_ROUTER_02_ADDRESS = CHAIN_TO_ADDRESSES_MAP[ChainId.BNB].swapRouter02Address!;
 export const BNB_V3_MIGRATOR_ADDRESS = CHAIN_TO_ADDRESSES_MAP[ChainId.BNB].v3MigratorAddress;
 
+export const BCH_SWAP_ROUTER_02_ADDRESS = CHAIN_TO_ADDRESSES_MAP[ChainId.SMARTBCH].swapRouter02Address!;
+
 export const V3_CORE_FACTORY_ADDRESSES: AddressMap = {
   ...constructSameAddressMap(FACTORY_ADDRESS),
   [ChainId.CELO]: CHAIN_TO_ADDRESSES_MAP[ChainId.CELO].v3CoreFactoryAddress,
@@ -62,6 +64,8 @@ export const UNISWAP_MULTICALL_ADDRESSES: AddressMap = {
 export const SWAP_ROUTER_02_ADDRESSES = (chainId: number) : string => {
   if (chainId == ChainId.BNB) {
     return BNB_SWAP_ROUTER_02_ADDRESS;
+  } else if (chainId == ChainId.SMARTBCH) {
+    return BCH_SWAP_ROUTER_02_ADDRESS;
   }
   return '0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45';
 };
@@ -90,6 +94,7 @@ export function constructSameAddressMap<T extends string>(
   }, {});
 }
 
+// TODO: should we remove smartbch from this list
 export const WETH9: {
   [chainId in Exclude<
     ChainId,

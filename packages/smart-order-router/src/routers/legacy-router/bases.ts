@@ -2,6 +2,7 @@
 import { ChainId, Token } from '@uniswap/sdk-core';
 
 import {
+  BC_BCH,
   BTC_BNB,
   BUSD_BNB,
   DAI_AVAX,
@@ -63,7 +64,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST = (
     [ChainId.AVALANCHE]: [WRAPPED_NATIVE_CURRENCY[ChainId.AVALANCHE]!, USDC_AVAX, DAI_AVAX],
     [ChainId.BASE]: [WRAPPED_NATIVE_CURRENCY[ChainId.BASE]!, USDC_BASE],
     [ChainId.BASE_GOERLI]: [WRAPPED_NATIVE_CURRENCY[ChainId.BASE_GOERLI]!],
-    [ChainId.SMARTBCH]: [WRAPPED_NATIVE_CURRENCY[ChainId.SMARTBCH]!],
+    [ChainId.SMARTBCH]: [WRAPPED_NATIVE_CURRENCY[ChainId.SMARTBCH]!, BC_BCH],
   };
 };
 
