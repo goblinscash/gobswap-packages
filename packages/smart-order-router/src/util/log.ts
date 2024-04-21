@@ -132,21 +132,21 @@ class NullLogger implements Logger {
   }
 }
 
-// export let log: Logger = new NullLogger();
-export let log: Logger = Logger.createLogger({
-  name: 'myapp',
-  streams: [
+export let log: Logger = new NullLogger();
+// export let log: Logger = Logger.createLogger({
+//   name: 'myapp',
+//   streams: [
 
-    {
-      // stream: process.stdout,
-      path: './logs/myapp.log'        // log INFO and above to stdout
-    },
-    {
-      level: 'error',
-      path: './logs/myapperr.log' // log ERROR and// log ERROR and above to a file
-    }
-  ]
-});
+//     {
+//       // stream: process.stdout,
+//       path: './logs/myapp.log'        // log INFO and above to stdout
+//     },
+//     {
+//       level: 'error',
+//       path: './logs/myapperr.log' // log ERROR and// log ERROR and above to a file
+//     }
+//   ]
+// });
 
 export const setGlobalLogger = (_log: Logger) => {
   log = _log;
