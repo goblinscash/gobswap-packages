@@ -6,6 +6,7 @@ import _ from 'lodash';
 import { ITokenListProvider, IV2SubgraphProvider, V2SubgraphPool, } from '../../../providers';
 import {
   BC_BCH,
+  BCH_BNB,
   CELO,
   CELO_ALFAJORES,
   CEUR_CELO,
@@ -165,6 +166,8 @@ const baseTokensByChain: { [chainId in ChainId]?: Token[] } = {
     DAI_BNB,
     USDC_BNB,
     USDT_BNB,
+    BCH_BNB
+
   ],
   [ChainId.AVALANCHE]: [
     DAI_AVAX,

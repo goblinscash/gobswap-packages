@@ -41,7 +41,7 @@ const CHAIN_CONFIGS: { [key: number]: ChainConfig } = {
   },
   //optimism
   [10]: {
-    router: '0xeC8B0F7Ffe3ae75d7FfAb09429e3675bb63503e4',
+    router: '0xE44a0A73F25D36185117473d7adEADD7D83fF5Dc',
     weth: '0x4200000000000000000000000000000000000006',
     creationBlock: 108825869,
   },
@@ -53,7 +53,7 @@ const CHAIN_CONFIGS: { [key: number]: ChainConfig } = {
   },
   // arbitrum
   [42161]: {
-    router: '0xeC8B0F7Ffe3ae75d7FfAb09429e3675bb63503e4',
+    router: '0xE44a0A73F25D36185117473d7adEADD7D83fF5Dc',
     weth: '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1',
     creationBlock: 125861718,
   },
@@ -77,7 +77,7 @@ const CHAIN_CONFIGS: { [key: number]: ChainConfig } = {
   },
   // binance smart chain
   [56]: {
-    router: '0xeC8B0F7Ffe3ae75d7FfAb09429e3675bb63503e4',
+    router: '0xE44a0A73F25D36185117473d7adEADD7D83fF5Dc',
     weth: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
     creationBlock: 31254967,
   },
@@ -95,7 +95,7 @@ const CHAIN_CONFIGS: { [key: number]: ChainConfig } = {
   },
   // base mainnet
   [8453]: {
-    router: '0xeC8B0F7Ffe3ae75d7FfAb09429e3675bb63503e4',
+    router: '0xE44a0A73F25D36185117473d7adEADD7D83fF5Dc',
     weth: '0x4200000000000000000000000000000000000006',
     creationBlock: 3229053,
   },

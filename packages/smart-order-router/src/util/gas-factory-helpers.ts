@@ -177,7 +177,7 @@ export async function getHighestLiquidityV3USDPool(
 export function getGasCostInUSD(
   usdPool: Pool,
   costNativeCurrency: CurrencyAmount<Token>
-) {
+): CurrencyAmount<Token> {  // Explicit return type
   const nativeCurrency = costNativeCurrency.currency;
   // convert fee into usd
   const nativeTokenPrice =
@@ -205,12 +205,13 @@ export async function getGasCostInQuoteToken(
   quoteToken: Token,
   nativePool: Pool | Pair,
   costNativeCurrency: CurrencyAmount<Token>
-) {
+): Promise<CurrencyAmount<Token>> {  // Explicit return type
   const nativeTokenPrice =
-    nativePool.token0.address == quoteToken.address
+    nativePool.token0.address === quoteToken.address
       ? nativePool.token1Price
       : nativePool.token0Price;
-  const gasCostQuoteToken = nativeTokenPrice.quote(costNativeCurrency);
+
+  const gasCostQuoteToken: CurrencyAmount<Token> = nativeTokenPrice.quote(costNativeCurrency); // Explicit type annotation
   return gasCostQuoteToken;
 }
 

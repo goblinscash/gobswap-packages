@@ -52,6 +52,7 @@ import {
   WBTC_OPTIMISM_GOERLI,
   WMATIC_POLYGON,
   WMATIC_POLYGON_MUMBAI,
+  BCH_BNB,
 } from './token-provider';
 
 // These tokens will added to the Token cache on initialization.
@@ -136,6 +137,7 @@ export const CACHE_SEED_TOKENS: {
     ETH: ETH_BNB,
     DAI: DAI_BNB,
     BTC: BTC_BNB,
+    BCH: BCH_BNB,
     WBNB: WRAPPED_NATIVE_CURRENCY[ChainId.BNB],
   },
   [ChainId.AVALANCHE]: {

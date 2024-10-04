@@ -1,0 +1,13 @@
+{
+    "$schema": "https://raw.githubusercontent.com/TypeChain/TypeChain/master/packages/typechain/src/cli/schema.json",
+    "outDir": "src/types",
+    "target": "ethers-v5",
+    "input": [
+      "./node_modules/@uniswap/v3-core/artifacts/contracts/**/*.json",
+      "./node_modules/@uniswap/v3-periphery/artifacts/contracts/**/*.json",
+      "./node_modules/@uniswap/v2-core/build/*UniswapV2*.json",
+      "./node_modules/@uniswap/v2-periphery/build/*UniswapV2*.json",
+      "src/abis/**/*.json"
+    ]
+  }
+  

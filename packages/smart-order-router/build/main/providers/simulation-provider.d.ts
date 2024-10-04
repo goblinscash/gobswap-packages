@@ -5,7 +5,7 @@ import { CurrencyAmount } from '../util';
 import { IPortionProvider } from './portion-provider';
 import { ProviderConfig } from './provider';
 import { ArbitrumGasData, OptimismGasData } from './v3/gas-data-provider';
-export type SimulationResult = {
+export declare type SimulationResult = {
     transaction: {
         hash: string;
         gas_used: number;

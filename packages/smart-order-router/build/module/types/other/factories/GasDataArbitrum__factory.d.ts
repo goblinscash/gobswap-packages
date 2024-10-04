@@ -1,18 +1,38 @@
 import { Signer } from "ethers";
-import { Provider } from "@ethersproject/providers";
+import type { Provider } from "@ethersproject/providers";
 import type { GasDataArbitrum, GasDataArbitrumInterface } from "../GasDataArbitrum";
 export declare class GasDataArbitrum__factory {
-    static readonly abi: {
-        inputs: never[];
-        name: string;
-        outputs: {
-            internalType: string;
-            name: string;
-            type: string;
-        }[];
-        stateMutability: string;
-        type: string;
-    }[];
+    static readonly abi: readonly [{
+        readonly inputs: readonly [];
+        readonly name: "getPricesInWei";
+        readonly outputs: readonly [{
+            readonly internalType: "uint256";
+            readonly name: "";
+            readonly type: "uint256";
+        }, {
+            readonly internalType: "uint256";
+            readonly name: "";
+            readonly type: "uint256";
+        }, {
+            readonly internalType: "uint256";
+            readonly name: "";
+            readonly type: "uint256";
+        }, {
+            readonly internalType: "uint256";
+            readonly name: "";
+            readonly type: "uint256";
+        }, {
+            readonly internalType: "uint256";
+            readonly name: "";
+            readonly type: "uint256";
+        }, {
+            readonly internalType: "uint256";
+            readonly name: "";
+            readonly type: "uint256";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }];
     static createInterface(): GasDataArbitrumInterface;
     static connect(address: string, signerOrProvider: Signer | Provider): GasDataArbitrum;
 }

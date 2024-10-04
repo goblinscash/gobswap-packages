@@ -380,6 +380,14 @@ export const USDT_BNB = new Token(
   'USDT'
 );
 
+export const BCH_BNB = new Token(
+  ChainId.BNB,
+  '0x8fF795a6F4D97E7887C79beA79aba5cc76444aDf',
+  18,
+  'BCH',
+  'BCH'
+);
+
 // Celo Tokens
 export const CELO = new Token(
   ChainId.CELO,
