@@ -137,7 +137,7 @@ export const CACHE_SEED_TOKENS: {
     ETH: ETH_BNB,
     DAI: DAI_BNB,
     BTC: BTC_BNB,
-    BCH: BCH_BNB,
+  BCH: BCH_BNB,
     WBNB: WRAPPED_NATIVE_CURRENCY[ChainId.BNB],
   },
   [ChainId.AVALANCHE]: {
