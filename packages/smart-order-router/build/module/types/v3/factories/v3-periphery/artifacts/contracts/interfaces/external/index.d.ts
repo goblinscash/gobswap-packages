@@ -1,3 +1,0 @@
-export { IERC1271__factory } from "./IERC1271__factory";
-export { IERC20PermitAllowed__factory } from "./IERC20PermitAllowed__factory";
-export { IWETH9__factory } from "./IWETH9__factory";

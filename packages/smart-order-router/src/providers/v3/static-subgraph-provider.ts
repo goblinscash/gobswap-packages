@@ -142,7 +142,7 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     USDT_BNB,
     BTC_BNB,
     ETH_BNB,
-    BCH_BNB
+    // BCH_BNB
   ],
   [ChainId.AVALANCHE]: [
     WRAPPED_NATIVE_CURRENCY[ChainId.AVALANCHE],

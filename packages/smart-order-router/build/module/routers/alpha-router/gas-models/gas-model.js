@@ -21,7 +21,9 @@ export const usdGasTokensByChain = {
     [ChainId.CELO_ALFAJORES]: [CUSD_CELO_ALFAJORES],
     [ChainId.GNOSIS]: [USDC_ETHEREUM_GNOSIS],
     [ChainId.MOONBEAM]: [USDC_MOONBEAM],
-    [ChainId.BNB]: [USDT_BNB, USDC_BNB, DAI_BNB],
+    [ChainId.BNB]: [USDT_BNB, USDC_BNB, DAI_BNB,
+        // BCH_BNB
+    ],
     [ChainId.AVALANCHE]: [DAI_AVAX, USDC_AVAX],
     [ChainId.BASE]: [USDC_BASE],
     [ChainId.SMARTBCH]: [USDT_SBCH]

@@ -166,6 +166,7 @@ const baseTokensByChain: { [chainId in ChainId]?: Token[] } = {
     DAI_BNB,
     USDC_BNB,
     USDT_BNB,
+    // BCH_BNB
  
 
   ],

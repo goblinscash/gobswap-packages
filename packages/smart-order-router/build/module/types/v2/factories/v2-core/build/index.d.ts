@@ -1,7 +1,0 @@
-export { IUniswapV2Callee__factory } from "./IUniswapV2Callee__factory";
-export { IUniswapV2ERC20__factory } from "./IUniswapV2ERC20__factory";
-export { IUniswapV2Factory__factory } from "./IUniswapV2Factory__factory";
-export { IUniswapV2Pair__factory } from "./IUniswapV2Pair__factory";
-export { UniswapV2ERC20__factory } from "./UniswapV2ERC20__factory";
-export { UniswapV2Factory__factory } from "./UniswapV2Factory__factory";
-export { UniswapV2Pair__factory } from "./UniswapV2Pair__factory";

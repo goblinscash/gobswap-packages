@@ -1,4 +1,4 @@
-import { BCH_BNB, GOB } from './../../providers/token-provider';
+import { GOB } from './../../providers/token-provider';
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { ChainId } from '@uniswap/sdk-core';
 import { BC_BCH, BTC_BNB, BUSD_BNB, DAI_AVAX, DAI_BNB, DAI_MAINNET, USDC_AVAX, USDC_BASE, USDC_BNB, USDC_MAINNET, USDT_BNB, USDT_MAINNET, WBTC_MAINNET, WMATIC_POLYGON, WMATIC_POLYGON_MUMBAI, } from '../../providers/token-provider';
@@ -35,7 +35,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST = (_tokenProvider) => {
             USDC_BNB,
             USDT_BNB,
             BTC_BNB,
-            BCH_BNB
+            // BCH_BNB
         ],
         [ChainId.AVALANCHE]: [WRAPPED_NATIVE_CURRENCY[ChainId.AVALANCHE], USDC_AVAX, DAI_AVAX],
         [ChainId.BASE]: [WRAPPED_NATIVE_CURRENCY[ChainId.BASE], USDC_BASE],

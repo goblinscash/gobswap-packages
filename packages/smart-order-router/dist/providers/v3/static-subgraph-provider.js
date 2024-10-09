@@ -93,7 +93,7 @@ const BASES_TO_CHECK_TRADES_AGAINST = {
         token_provider_2.USDT_BNB,
         token_provider_2.BTC_BNB,
         token_provider_2.ETH_BNB,
-        token_provider_1.BCH_BNB
+        // BCH_BNB
     ],
     [sdk_core_1.ChainId.AVALANCHE]: [
         chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.AVALANCHE],

@@ -61,7 +61,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST = (
       USDC_BNB,
       USDT_BNB,
       BTC_BNB,
-      BCH_BNB
+      // BCH_BNB
     ],
     [ChainId.AVALANCHE]: [WRAPPED_NATIVE_CURRENCY[ChainId.AVALANCHE]!, USDC_AVAX, DAI_AVAX],
     [ChainId.BASE]: [WRAPPED_NATIVE_CURRENCY[ChainId.BASE]!, USDC_BASE],

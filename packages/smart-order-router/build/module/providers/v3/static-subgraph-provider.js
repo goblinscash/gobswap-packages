@@ -1,4 +1,4 @@
-import { BCH_BNB, GOB } from './../token-provider';
+import { GOB } from './../token-provider';
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { ChainId } from '@uniswap/sdk-core';
 import { FeeAmount, Pool } from '@uniswap/v3-sdk';
@@ -78,7 +78,7 @@ const BASES_TO_CHECK_TRADES_AGAINST = {
         USDT_BNB,
         BTC_BNB,
         ETH_BNB,
-        BCH_BNB
+        // BCH_BNB
     ],
     [ChainId.AVALANCHE]: [
         WRAPPED_NATIVE_CURRENCY[ChainId.AVALANCHE],

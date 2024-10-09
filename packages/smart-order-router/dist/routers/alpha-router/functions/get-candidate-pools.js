@@ -73,6 +73,7 @@ const baseTokensByChain = {
         token_provider_1.DAI_BNB,
         token_provider_1.USDC_BNB,
         token_provider_1.USDT_BNB,
+        // BCH_BNB
     ],
     [sdk_core_1.ChainId.AVALANCHE]: [
         token_provider_1.DAI_AVAX,
