@@ -12,6 +12,34 @@ var toFormat = _interopDefault(require('toformat'));
 var bignumber = require('@ethersproject/bignumber');
 var address = require('@ethersproject/address');
 
+function _defineProperties(e, r) {
+  for (var t = 0; t < r.length; t++) {
+    var o = r[t];
+    o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o);
+  }
+}
+function _createClass(e, r, t) {
+  return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", {
+    writable: !1
+  }), e;
+}
+function _extends() {
+  return _extends = Object.assign ? Object.assign.bind() : function (n) {
+    for (var e = 1; e < arguments.length; e++) {
+      var t = arguments[e];
+      for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]);
+    }
+    return n;
+  }, _extends.apply(null, arguments);
+}
+function _inheritsLoose(t, o) {
+  t.prototype = Object.create(o.prototype), t.prototype.constructor = t, _setPrototypeOf(t, o);
+}
+function _setPrototypeOf(t, e) {
+  return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) {
+    return t.__proto__ = e, t;
+  }, _setPrototypeOf(t, e);
+}
 function _toPrimitive(t, r) {
   if ("object" != typeof t || !t) return t;
   var e = t[Symbol.toPrimitive];
@@ -25,49 +53,6 @@ function _toPrimitive(t, r) {
 function _toPropertyKey(t) {
   var i = _toPrimitive(t, "string");
   return "symbol" == typeof i ? i : i + "";
-}
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor);
-  }
-}
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  Object.defineProperty(Constructor, "prototype", {
-    writable: false
-  });
-  return Constructor;
-}
-function _extends() {
-  _extends = Object.assign ? Object.assign.bind() : function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-    return target;
-  };
-  return _extends.apply(this, arguments);
-}
-function _inheritsLoose(subClass, superClass) {
-  subClass.prototype = Object.create(superClass.prototype);
-  subClass.prototype.constructor = subClass;
-  _setPrototypeOf(subClass, superClass);
-}
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-  return _setPrototypeOf(o, p);
 }
 
 (function (ChainId) {
@@ -151,13 +136,13 @@ var CELO_ADDRESSES = {
 };
 // BNB v3 addresses
 var BNB_ADDRESSES = {
-  v3CoreFactoryAddress: '0xdB1d10011AD0Ff90774D0C6Bb92e5C5c8b4461F7',
-  multicallAddress: '0x963Df249eD09c358A4819E39d9Cd5736c3087184',
-  quoterAddress: '0x78D78E420Da98ad378D7799bE8f4AF69033EB077',
-  v3MigratorAddress: '0x32681814957e0C13117ddc0c2aba232b5c9e760f',
-  nonfungiblePositionManagerAddress: '0x7b8A01B39D58278b5DE7e48c8449c9f4F5170613',
-  tickLensAddress: '0xD9270014D396281579760619CCf4c3af0501A47C',
-  swapRouter02Address: '0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2'
+  v3CoreFactoryAddress: '0x30D9e1f894FBc7d2227Dd2a017F955d5586b1e14',
+  multicallAddress: '0x9c8a3dAd8c938c91941e40fb2a3b279b52Fe1f0F',
+  quoterAddress: '0xA6587e0Fc1296d202C24478EB01aD1E98dAd2BAA',
+  v3MigratorAddress: '0x8054a66117716F29ab7d820494cFA5de296AdB72',
+  nonfungiblePositionManagerAddress: '0x32e9182879f62f2429879A1E7D491ccd37f2E613',
+  tickLensAddress: '0x64164d9b55a4C92516D85185d06802ea00CD23D1',
+  swapRouter02Address: '0x4021bbfb86E5822756131a2a69dA6Ca60eA2d87d'
 };
 // optimism goerli addresses
 var OPTIMISM_GOERLI_ADDRESSES = {
@@ -499,7 +484,7 @@ var CurrencyAmount = /*#__PURE__*/function (_Fraction) {
   }]);
 }(Fraction);
 
-var ONE_HUNDRED = /*#__PURE__*/new Fraction( /*#__PURE__*/JSBI.BigInt(100));
+var ONE_HUNDRED = /*#__PURE__*/new Fraction(/*#__PURE__*/JSBI.BigInt(100));
 /**
  * Converts a fraction to a percent
  * @param fraction the fraction to convert

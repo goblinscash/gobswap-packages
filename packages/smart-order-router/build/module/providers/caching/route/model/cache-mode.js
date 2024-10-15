@@ -15,4 +15,3 @@ export var CacheMode;
     CacheMode["Darkmode"] = "darkmode";
     CacheMode["Tapcompare"] = "tapcompare";
 })(CacheMode || (CacheMode = {}));
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2FjaGUtbW9kZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uL3NyYy9wcm92aWRlcnMvY2FjaGluZy9yb3V0ZS9tb2RlbC9jYWNoZS1tb2RlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7O0dBVUc7QUFDSCxNQUFNLENBQU4sSUFBWSxTQUlYO0FBSkQsV0FBWSxTQUFTO0lBQ25CLGtDQUFxQixDQUFBO0lBQ3JCLGtDQUFxQixDQUFBO0lBQ3JCLHNDQUF5QixDQUFBO0FBQzNCLENBQUMsRUFKVyxTQUFTLEtBQVQsU0FBUyxRQUlwQiJ9

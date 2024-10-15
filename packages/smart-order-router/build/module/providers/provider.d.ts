@@ -1,5 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber';
-export type ProviderConfig = {
+export declare type ProviderConfig = {
     /**
      * The block number to use when getting data on-chain.
      */
@@ -16,7 +16,7 @@ export type ProviderConfig = {
      */
     saveTenderlySimulationIfFailed?: boolean;
 };
-export type LocalCacheEntry<T> = {
+export declare type LocalCacheEntry<T> = {
     entry: T;
     blockNumber: number;
 };

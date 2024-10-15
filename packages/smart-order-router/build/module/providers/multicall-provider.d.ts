@@ -1,7 +1,7 @@
 import { Interface } from '@ethersproject/abi';
 import { BigNumber } from '@ethersproject/bignumber';
 import { ProviderConfig } from './provider';
-export type CallSameFunctionOnMultipleContractsParams<TFunctionParams, TAdditionalConfig = any> = {
+export declare type CallSameFunctionOnMultipleContractsParams<TFunctionParams, TAdditionalConfig = any> = {
     addresses: string[];
     contractInterface: Interface;
     functionName: string;
@@ -9,7 +9,7 @@ export type CallSameFunctionOnMultipleContractsParams<TFunctionParams, TAddition
     providerConfig?: ProviderConfig;
     additionalConfig?: TAdditionalConfig;
 };
-export type CallSameFunctionOnContractWithMultipleParams<TFunctionParams, TAdditionalConfig = any> = {
+export declare type CallSameFunctionOnContractWithMultipleParams<TFunctionParams, TAdditionalConfig = any> = {
     address: string;
     contractInterface: Interface;
     functionName: string;
@@ -17,7 +17,7 @@ export type CallSameFunctionOnContractWithMultipleParams<TFunctionParams, TAddit
     providerConfig?: ProviderConfig;
     additionalConfig?: TAdditionalConfig;
 };
-export type CallMultipleFunctionsOnSameContractParams<TFunctionParams, TAdditionalConfig = any> = {
+export declare type CallMultipleFunctionsOnSameContractParams<TFunctionParams, TAdditionalConfig = any> = {
     address: string;
     contractInterface: Interface;
     functionNames: string[];
@@ -25,15 +25,15 @@ export type CallMultipleFunctionsOnSameContractParams<TFunctionParams, TAddition
     providerConfig?: ProviderConfig;
     additionalConfig?: TAdditionalConfig;
 };
-export type SuccessResult<TReturn> = {
+export declare type SuccessResult<TReturn> = {
     success: true;
     result: TReturn;
 };
-export type FailResult = {
+export declare type FailResult = {
     success: false;
     returnData: string;
 };
-export type Result<TReturn> = SuccessResult<TReturn> | FailResult;
+export declare type Result<TReturn> = SuccessResult<TReturn> | FailResult;
 /**
  * Provider for fetching data on chain using multicall contracts.
  *

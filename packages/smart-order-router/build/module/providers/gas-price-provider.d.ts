@@ -1,5 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber';
-export type GasPrice = {
+export declare type GasPrice = {
     gasPriceWei: BigNumber;
 };
 /**
