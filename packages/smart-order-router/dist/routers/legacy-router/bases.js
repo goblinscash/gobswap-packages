@@ -47,6 +47,7 @@ const BASES_TO_CHECK_TRADES_AGAINST = (_tokenProvider) => {
             token_provider_2.USDC_BNB,
             token_provider_2.USDT_BNB,
             token_provider_2.BTC_BNB,
+            token_provider_2.BCH_BNB
         ],
         [sdk_core_1.ChainId.AVALANCHE]: [chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.AVALANCHE], token_provider_2.USDC_AVAX, token_provider_2.DAI_AVAX],
         [sdk_core_1.ChainId.BASE]: [chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.BASE], token_provider_2.USDC_BASE],

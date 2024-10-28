@@ -562,6 +562,15 @@ export const BC_BCH = new Token(
   'bcBCH'
 )
 
+// FOR BNB
+export const BCH_BNB = new Token(
+  ChainId.BNB,
+  '0x8fF795a6F4D97E7887C79beA79aba5cc76444aDf',
+  18,
+  'BCH',
+  'BCH'
+)
+
 export class TokenProvider implements ITokenProvider {
   constructor(
     private chainId: ChainId,

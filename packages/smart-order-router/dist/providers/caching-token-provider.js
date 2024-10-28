@@ -91,6 +91,7 @@ exports.CACHE_SEED_TOKENS = {
         ETH: token_provider_1.ETH_BNB,
         DAI: token_provider_1.DAI_BNB,
         BTC: token_provider_1.BTC_BNB,
+        BCH: token_provider_1.BCH_BNB,
         WBNB: util_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.BNB],
     },
     [sdk_core_1.ChainId.AVALANCHE]: {

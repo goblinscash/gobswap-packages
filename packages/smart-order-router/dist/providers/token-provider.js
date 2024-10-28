@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CELO_ALFAJORES = exports.CEUR_CELO = exports.CUSD_CELO = exports.DAI_CELO = exports.CELO = exports.USDT_BNB = exports.USDC_BNB = exports.ETH_BNB = exports.DAI_BNB = exports.BUSD_BNB = exports.BTC_BNB = exports.WETH_POLYGON_MUMBAI = exports.DAI_POLYGON_MUMBAI = exports.USDC_POLYGON_MUMBAI = exports.WMATIC_POLYGON_MUMBAI = exports.DAI_POLYGON = exports.USDC_POLYGON = exports.WETH_POLYGON = exports.WMATIC_POLYGON = exports.USDC_ARBITRUM_GOERLI = exports.DAI_ARBITRUM_GOERLI = exports.ARB_ARBITRUM = exports.DAI_ARBITRUM = exports.WBTC_ARBITRUM = exports.USDT_ARBITRUM = exports.USDC_ARBITRUM = exports.DAI_OPTIMISM_GOERLI = exports.WBTC_OPTIMISM_GOERLI = exports.USDT_OPTIMISM_GOERLI = exports.USDC_OPTIMISM_GOERLI = exports.OP_OPTIMISM = exports.DAI_OPTIMISM = exports.WBTC_OPTIMISM = exports.USDT_OPTIMISM = exports.USDC_OPTIMISM = exports.UNI_GOERLI = exports.DAI_GOERLI = exports.WBTC_GOERLI = exports.USDT_GOERLI = exports.USDC_GOERLI = exports.DAI_SEPOLIA = exports.USDC_SEPOLIA = exports.LIDO_MAINNET = exports.AAVE_MAINNET = exports.UNI_MAINNET = exports.FEI_MAINNET = exports.DAI_MAINNET = exports.WBTC_MAINNET = exports.USDT_MAINNET = exports.USDC_MAINNET = void 0;
-exports.WNATIVE_ON = exports.USDC_ON = exports.USDT_ON = exports.DAI_ON = exports.TokenProvider = exports.BC_BCH = exports.WBTC_MOONBEAM = exports.DAI_MOONBEAM = exports.WGLMR_MOONBEAM = exports.USDC_MOONBEAM = exports.WBTC_GNOSIS = exports.WXDAI_GNOSIS = exports.USDC_ETHEREUM_GNOSIS = exports.GOB = exports.USDT_SBCH = exports.USDC_BASE_GOERLI = exports.USDC_BASE = exports.USDC_AVAX = exports.DAI_AVAX = exports.CEUR_CELO_ALFAJORES = exports.CUSD_CELO_ALFAJORES = exports.DAI_CELO_ALFAJORES = void 0;
+exports.WNATIVE_ON = exports.USDC_ON = exports.USDT_ON = exports.DAI_ON = exports.TokenProvider = exports.BCH_BNB = exports.BC_BCH = exports.WBTC_MOONBEAM = exports.DAI_MOONBEAM = exports.WGLMR_MOONBEAM = exports.USDC_MOONBEAM = exports.WBTC_GNOSIS = exports.WXDAI_GNOSIS = exports.USDC_ETHEREUM_GNOSIS = exports.GOB = exports.USDT_SBCH = exports.USDC_BASE_GOERLI = exports.USDC_BASE = exports.USDC_AVAX = exports.DAI_AVAX = exports.CEUR_CELO_ALFAJORES = exports.CUSD_CELO_ALFAJORES = exports.DAI_CELO_ALFAJORES = void 0;
 const abi_1 = require("@ethersproject/abi");
 const strings_1 = require("@ethersproject/strings");
 const sdk_core_1 = require("@uniswap/sdk-core");
@@ -102,6 +102,8 @@ exports.DAI_MOONBEAM = new sdk_core_1.Token(sdk_core_1.ChainId.MOONBEAM, '0x818e
 exports.WBTC_MOONBEAM = new sdk_core_1.Token(sdk_core_1.ChainId.MOONBEAM, '0x922D641a426DcFFaeF11680e5358F34d97d112E1', 8, 'WBTC', 'Wrapped BTC bridged using Multichain');
 // FOR SMARTBCH
 exports.BC_BCH = new sdk_core_1.Token(sdk_core_1.ChainId.SMARTBCH, '0xbc9bd8dde6c5a8e1cbe293356e02f5984693b195', 18, 'bcBCH', 'bcBCH');
+// FOR BNB
+exports.BCH_BNB = new sdk_core_1.Token(sdk_core_1.ChainId.BNB, '0x8fF795a6F4D97E7887C79beA79aba5cc76444aDf', 18, 'BCH', 'BCH');
 class TokenProvider {
     constructor(chainId, multicall2Provider) {
         this.chainId = chainId;

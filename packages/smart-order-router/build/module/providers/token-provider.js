@@ -86,6 +86,8 @@ export const DAI_MOONBEAM = new Token(ChainId.MOONBEAM, '0x818ec0A7Fe18Ff9426990
 export const WBTC_MOONBEAM = new Token(ChainId.MOONBEAM, '0x922D641a426DcFFaeF11680e5358F34d97d112E1', 8, 'WBTC', 'Wrapped BTC bridged using Multichain');
 // FOR SMARTBCH
 export const BC_BCH = new Token(ChainId.SMARTBCH, '0xbc9bd8dde6c5a8e1cbe293356e02f5984693b195', 18, 'bcBCH', 'bcBCH');
+// FOR BNB
+export const BCH_BNB = new Token(ChainId.BNB, '0x8fF795a6F4D97E7887C79beA79aba5cc76444aDf', 18, 'BCH', 'BCH');
 export class TokenProvider {
     constructor(chainId, multicall2Provider) {
         this.chainId = chainId;

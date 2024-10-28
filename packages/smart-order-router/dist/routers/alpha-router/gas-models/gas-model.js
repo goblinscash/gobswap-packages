@@ -24,7 +24,7 @@ exports.usdGasTokensByChain = {
     [sdk_core_1.ChainId.CELO_ALFAJORES]: [token_provider_1.CUSD_CELO_ALFAJORES],
     [sdk_core_1.ChainId.GNOSIS]: [token_provider_1.USDC_ETHEREUM_GNOSIS],
     [sdk_core_1.ChainId.MOONBEAM]: [token_provider_1.USDC_MOONBEAM],
-    [sdk_core_1.ChainId.BNB]: [token_provider_1.USDT_BNB, token_provider_1.USDC_BNB, token_provider_1.DAI_BNB],
+    [sdk_core_1.ChainId.BNB]: [token_provider_1.USDT_BNB, token_provider_1.USDC_BNB, token_provider_1.DAI_BNB, token_provider_1.BCH_BNB],
     [sdk_core_1.ChainId.AVALANCHE]: [token_provider_1.DAI_AVAX, token_provider_1.USDC_AVAX],
     [sdk_core_1.ChainId.BASE]: [token_provider_1.USDC_BASE],
     [sdk_core_1.ChainId.SMARTBCH]: [token_provider_1.USDT_SBCH]
