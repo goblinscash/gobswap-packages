@@ -85,6 +85,7 @@ function buildTrade(tokenInCurrency, tokenOutCurrency, tradeType, routeAmounts) 
             outputAmount: quoteCurrency,
         };
     });
+    // @ts-ignore
     const trade = new router_sdk_1.Trade({ v2Routes, v3Routes, mixedRoutes, tradeType });
     return trade;
 }

@@ -79,12 +79,14 @@ export function buildTrade(tokenInCurrency, tokenOutCurrency, tradeType, routeAm
             outputAmount: quoteCurrency,
         };
     });
+    // @ts-ignore
     const trade = new Trade({ v2Routes, v3Routes, mixedRoutes, tradeType });
     return trade;
 }
 export function buildSwapMethodParameters(trade, swapConfig, chainId) {
     if (swapConfig.type == SwapType.UNIVERSAL_ROUTER) {
         return {
+            // @ts-ignore
             ...UniveralRouter.swapERC20CallParameters(trade, swapConfig),
             to: UNIVERSAL_ROUTER_ADDRESS(chainId),
         };

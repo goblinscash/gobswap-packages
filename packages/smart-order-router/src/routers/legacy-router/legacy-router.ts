@@ -500,6 +500,7 @@ export class LegacyRouter {
       return new Trade({
         v3Routes: [
           {
+            // @ts-ignore
             routev3: routeCurrency,
             inputAmount: amountCurrency,
             outputAmount: quoteCurrency,
@@ -530,6 +531,7 @@ export class LegacyRouter {
       return new Trade({
         v3Routes: [
           {
+            // @ts-ignore
             routev3: routeCurrency,
             inputAmount: quoteCurrency,
             outputAmount: amountCurrency,

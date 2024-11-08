@@ -174,6 +174,7 @@ export class V2SubgraphProvider implements IV2SubgraphProvider {
           if (
             this.rollback &&
             blockNumber &&
+            // @ts-ignore
             _.includes(err.message, 'indexed up to')
           ) {
             blockNumber = blockNumber - 10;

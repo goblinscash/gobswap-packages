@@ -1945,6 +1945,7 @@ export class AlphaRouter
           deadlineOrPreviousBlockhash: deadline,
           inputTokenPermit,
         },
+            // @ts-ignore
         Position.fromAmounts({
           pool: preLiquidityPosition.pool,
           tickLower: preLiquidityPosition.tickLower,

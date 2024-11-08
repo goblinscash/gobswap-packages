@@ -93,6 +93,7 @@ export class V2SubgraphProvider {
             onRetry: (err, retry) => {
                 if (this.rollback &&
                     blockNumber &&
+                    // @ts-ignore
                     _.includes(err.message, 'indexed up to')) {
                     blockNumber = blockNumber - 10;
                     log.info(`Detected subgraph indexing error. Rolled back block number to: ${blockNumber}`);

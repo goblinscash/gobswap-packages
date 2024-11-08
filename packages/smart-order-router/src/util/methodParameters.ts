@@ -222,7 +222,7 @@ export function buildTrade<TTradeType extends TradeType>(
       };
     }
   );
-
+            // @ts-ignore
   const trade = new Trade({ v2Routes, v3Routes, mixedRoutes, tradeType });
 
   return trade;
@@ -235,6 +235,7 @@ export function buildSwapMethodParameters(
 ): MethodParameters {
   if (swapConfig.type == SwapType.UNIVERSAL_ROUTER) {
     return {
+            // @ts-ignore
       ...UniveralRouter.swapERC20CallParameters(trade, swapConfig),
       to: UNIVERSAL_ROUTER_ADDRESS(chainId),
     };

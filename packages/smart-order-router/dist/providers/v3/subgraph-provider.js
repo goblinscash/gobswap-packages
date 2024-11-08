@@ -129,6 +129,7 @@ class V3SubgraphProvider {
                 onRetry: (err, retry) => {
                     if (this.rollback &&
                         blockNumber &&
+                        // @ts-ignore
                         lodash_1.default.includes(err.message, 'indexed up to')) {
                         blockNumber = blockNumber - 10;
                         util_1.log.info(`Detected subgraph indexing error. Rolled back block number to: ${blockNumber}`);

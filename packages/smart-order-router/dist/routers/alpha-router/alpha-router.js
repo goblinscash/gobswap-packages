@@ -888,7 +888,9 @@ class AlphaRouter {
                 slippageTolerance,
                 deadlineOrPreviousBlockhash: deadline,
                 inputTokenPermit,
-            }, v3_sdk_1.Position.fromAmounts({
+            }, 
+            // @ts-ignore
+            v3_sdk_1.Position.fromAmounts({
                 pool: preLiquidityPosition.pool,
                 tickLower: preLiquidityPosition.tickLower,
                 tickUpper: preLiquidityPosition.tickUpper,

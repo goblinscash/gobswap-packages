@@ -156,6 +156,7 @@ class MixedRouteHeuristicGasModelFactory extends gas_model_1.IOnChainGasModelFac
         let baseGasUse = bignumber_1.BigNumber.from(0);
         const route = routeWithValidQuote.route;
         const res = (0, router_sdk_1.partitionMixedRouteByProtocol)(route);
+        // @ts-ignore
         res.map((section) => {
             if (section.every((pool) => pool instanceof v3_sdk_1.Pool)) {
                 baseGasUse = baseGasUse.add((0, gas_costs_1.BASE_SWAP_COST)(chainId));

@@ -10,19 +10,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CUSTOM_BASES = exports.ADDITIONAL_BASES = exports.BASES_TO_CHECK_TRADES_AGAINST = void 0;
-const token_provider_1 = require("./../../providers/token-provider");
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 const sdk_core_1 = require("@uniswap/sdk-core");
-const token_provider_2 = require("../../providers/token-provider");
+const token_provider_1 = require("../../providers/token-provider");
 const chains_1 = require("../../util/chains");
 const BASES_TO_CHECK_TRADES_AGAINST = (_tokenProvider) => {
     return {
         [sdk_core_1.ChainId.MAINNET]: [
             chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.MAINNET],
-            token_provider_2.DAI_MAINNET,
-            token_provider_2.USDC_MAINNET,
-            token_provider_2.USDT_MAINNET,
-            token_provider_2.WBTC_MAINNET,
+            token_provider_1.DAI_MAINNET,
+            token_provider_1.USDC_MAINNET,
+            token_provider_1.USDT_MAINNET,
+            token_provider_1.WBTC_MAINNET,
         ],
         [sdk_core_1.ChainId.GOERLI]: [chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.GOERLI]],
         [sdk_core_1.ChainId.SEPOLIA]: [chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.SEPOLIA]],
@@ -34,25 +33,25 @@ const BASES_TO_CHECK_TRADES_AGAINST = (_tokenProvider) => {
         [sdk_core_1.ChainId.ARBITRUM_GOERLI]: [
             chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.ARBITRUM_GOERLI],
         ],
-        [sdk_core_1.ChainId.POLYGON]: [token_provider_2.WMATIC_POLYGON],
-        [sdk_core_1.ChainId.POLYGON_MUMBAI]: [token_provider_2.WMATIC_POLYGON_MUMBAI],
+        [sdk_core_1.ChainId.POLYGON]: [token_provider_1.WMATIC_POLYGON],
+        [sdk_core_1.ChainId.POLYGON_MUMBAI]: [token_provider_1.WMATIC_POLYGON_MUMBAI],
         [sdk_core_1.ChainId.CELO]: [chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.CELO]],
         [sdk_core_1.ChainId.CELO_ALFAJORES]: [chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.CELO_ALFAJORES]],
         [sdk_core_1.ChainId.GNOSIS]: [chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.GNOSIS]],
         [sdk_core_1.ChainId.MOONBEAM]: [chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.MOONBEAM]],
         [sdk_core_1.ChainId.BNB]: [
             chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.BNB],
-            token_provider_2.BUSD_BNB,
-            token_provider_2.DAI_BNB,
-            token_provider_2.USDC_BNB,
-            token_provider_2.USDT_BNB,
-            token_provider_2.BTC_BNB,
-            token_provider_2.BCH_BNB
+            token_provider_1.BUSD_BNB,
+            token_provider_1.DAI_BNB,
+            token_provider_1.USDC_BNB,
+            token_provider_1.USDT_BNB,
+            token_provider_1.BTC_BNB,
+            token_provider_1.BCH_BNB
         ],
-        [sdk_core_1.ChainId.AVALANCHE]: [chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.AVALANCHE], token_provider_2.USDC_AVAX, token_provider_2.DAI_AVAX],
-        [sdk_core_1.ChainId.BASE]: [chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.BASE], token_provider_2.USDC_BASE],
+        [sdk_core_1.ChainId.AVALANCHE]: [chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.AVALANCHE], token_provider_1.USDC_AVAX, token_provider_1.DAI_AVAX],
+        [sdk_core_1.ChainId.BASE]: [chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.BASE], token_provider_1.USDC_BASE],
         [sdk_core_1.ChainId.BASE_GOERLI]: [chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.BASE_GOERLI]],
-        [sdk_core_1.ChainId.SMARTBCH]: [token_provider_1.GOB, chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.SMARTBCH], token_provider_2.BC_BCH],
+        [sdk_core_1.ChainId.SMARTBCH]: [token_provider_1.GOB, chains_1.WRAPPED_NATIVE_CURRENCY[sdk_core_1.ChainId.SMARTBCH], token_provider_1.BC_BCH],
     };
 };
 exports.BASES_TO_CHECK_TRADES_AGAINST = BASES_TO_CHECK_TRADES_AGAINST;
@@ -77,7 +76,7 @@ exports.ADDITIONAL_BASES = ADDITIONAL_BASES;
  */
 const CUSTOM_BASES = (tokenProvider) => __awaiter(void 0, void 0, void 0, function* () {
     return {
-        [sdk_core_1.ChainId.MAINNET]: Object.assign(Object.assign({}, (yield getBasePairByAddress(tokenProvider, sdk_core_1.ChainId.MAINNET, '0xd46ba6d942050d489dbd938a2c909a5d5039a161', token_provider_2.DAI_MAINNET.address))), (yield getBasePairByAddress(tokenProvider, sdk_core_1.ChainId.MAINNET, '0xd46ba6d942050d489dbd938a2c909a5d5039a161', chains_1.WRAPPED_NATIVE_CURRENCY[1].address))),
+        [sdk_core_1.ChainId.MAINNET]: Object.assign(Object.assign({}, (yield getBasePairByAddress(tokenProvider, sdk_core_1.ChainId.MAINNET, '0xd46ba6d942050d489dbd938a2c909a5d5039a161', token_provider_1.DAI_MAINNET.address))), (yield getBasePairByAddress(tokenProvider, sdk_core_1.ChainId.MAINNET, '0xd46ba6d942050d489dbd938a2c909a5d5039a161', chains_1.WRAPPED_NATIVE_CURRENCY[1].address))),
     };
 });
 exports.CUSTOM_BASES = CUSTOM_BASES;

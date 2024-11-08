@@ -866,7 +866,9 @@ export class AlphaRouter {
                 slippageTolerance,
                 deadlineOrPreviousBlockhash: deadline,
                 inputTokenPermit,
-            }, Position.fromAmounts({
+            }, 
+            // @ts-ignore
+            Position.fromAmounts({
                 pool: preLiquidityPosition.pool,
                 tickLower: preLiquidityPosition.tickLower,
                 tickUpper: preLiquidityPosition.tickUpper,

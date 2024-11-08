@@ -192,6 +192,7 @@ export class V3SubgraphProvider implements IV3SubgraphProvider {
           if (
             this.rollback &&
             blockNumber &&
+            // @ts-ignore
             _.includes(err.message, 'indexed up to')
           ) {
             blockNumber = blockNumber - 10;

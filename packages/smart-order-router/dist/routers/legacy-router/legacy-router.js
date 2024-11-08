@@ -254,6 +254,7 @@ class LegacyRouter {
             return new router_sdk_1.Trade({
                 v3Routes: [
                     {
+                        // @ts-ignore
                         routev3: routeCurrency,
                         inputAmount: amountCurrency,
                         outputAmount: quoteCurrency,
@@ -270,6 +271,7 @@ class LegacyRouter {
             return new router_sdk_1.Trade({
                 v3Routes: [
                     {
+                        // @ts-ignore
                         routev3: routeCurrency,
                         inputAmount: quoteCurrency,
                         outputAmount: amountCurrency,

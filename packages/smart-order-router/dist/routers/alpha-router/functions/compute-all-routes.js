@@ -20,6 +20,7 @@ function computeAllV2Routes(tokenIn, tokenOut, pools, maxHops) {
 exports.computeAllV2Routes = computeAllV2Routes;
 function computeAllMixedRoutes(tokenIn, tokenOut, parts, maxHops) {
     const routesRaw = computeAllRoutes(tokenIn, tokenOut, (route, tokenIn, tokenOut) => {
+        // @ts-ignore
         return new router_1.MixedRoute(route, tokenIn, tokenOut);
     }, parts, maxHops);
     /// filter out pure v3 and v2 routes

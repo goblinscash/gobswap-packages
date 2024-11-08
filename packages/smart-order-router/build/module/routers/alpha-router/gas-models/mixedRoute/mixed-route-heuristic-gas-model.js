@@ -139,6 +139,7 @@ export class MixedRouteHeuristicGasModelFactory extends IOnChainGasModelFactory 
         let baseGasUse = BigNumber.from(0);
         const route = routeWithValidQuote.route;
         const res = partitionMixedRouteByProtocol(route);
+        // @ts-ignore
         res.map((section) => {
             if (section.every((pool) => pool instanceof Pool)) {
                 baseGasUse = baseGasUse.add(BASE_SWAP_COST(chainId));
