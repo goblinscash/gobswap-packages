@@ -19,9 +19,6 @@ const routes_1 = require("../../../util/routes");
  * @class V2RouteWithValidQuote
  */
 class V2RouteWithValidQuote {
-    toString() {
-        return `${this.percent.toFixed(2)}% QuoteGasAdj[${this.quoteAdjustedForGas.toExact()}] Quote[${this.quote.toExact()}] Gas[${this.gasEstimate.toString()}] = ${(0, routes_1.routeToString)(this.route)}`;
-    }
     constructor({ amount, rawQuote, percent, route, gasModel, quoteToken, tradeType, v2PoolProvider, }) {
         this.protocol = router_sdk_1.Protocol.V2;
         this.amount = amount;
@@ -48,6 +45,9 @@ class V2RouteWithValidQuote {
         this.poolAddresses = lodash_1.default.map(route.pairs, (p) => v2PoolProvider.getPoolAddress(p.token0, p.token1).poolAddress);
         this.tokenPath = this.route.path;
     }
+    toString() {
+        return `${this.percent.toFixed(2)}% QuoteGasAdj[${this.quoteAdjustedForGas.toExact()}] Quote[${this.quote.toExact()}] Gas[${this.gasEstimate.toString()}] = ${(0, routes_1.routeToString)(this.route)}`;
+    }
 }
 exports.V2RouteWithValidQuote = V2RouteWithValidQuote;
 /**
@@ -59,9 +59,6 @@ exports.V2RouteWithValidQuote = V2RouteWithValidQuote;
  * @class V3RouteWithValidQuote
  */
 class V3RouteWithValidQuote {
-    toString() {
-        return `${this.percent.toFixed(2)}% QuoteGasAdj[${this.quoteAdjustedForGas.toExact()}] Quote[${this.quote.toExact()}] Gas[${this.gasEstimate.toString()}] = ${(0, routes_1.routeToString)(this.route)}`;
-    }
     constructor({ amount, rawQuote, sqrtPriceX96AfterList, initializedTicksCrossedList, quoterGasEstimate, percent, route, gasModel, quoteToken, tradeType, v3PoolProvider, }) {
         this.protocol = router_sdk_1.Protocol.V3;
         this.amount = amount;
@@ -91,6 +88,9 @@ class V3RouteWithValidQuote {
         this.poolAddresses = lodash_1.default.map(route.pools, (p) => v3PoolProvider.getPoolAddress(p.token0, p.token1, p.fee).poolAddress);
         this.tokenPath = this.route.tokenPath;
     }
+    toString() {
+        return `${this.percent.toFixed(2)}% QuoteGasAdj[${this.quoteAdjustedForGas.toExact()}] Quote[${this.quote.toExact()}] Gas[${this.gasEstimate.toString()}] = ${(0, routes_1.routeToString)(this.route)}`;
+    }
 }
 exports.V3RouteWithValidQuote = V3RouteWithValidQuote;
 /**
@@ -102,9 +102,6 @@ exports.V3RouteWithValidQuote = V3RouteWithValidQuote;
  * @class MixedRouteWithValidQuote
  */
 class MixedRouteWithValidQuote {
-    toString() {
-        return `${this.percent.toFixed(2)}% QuoteGasAdj[${this.quoteAdjustedForGas.toExact()}] Quote[${this.quote.toExact()}] Gas[${this.gasEstimate.toString()}] = ${(0, routes_1.routeToString)(this.route)}`;
-    }
     constructor({ amount, rawQuote, sqrtPriceX96AfterList, initializedTicksCrossedList, quoterGasEstimate, percent, route, mixedRouteGasModel, quoteToken, tradeType, v3PoolProvider, v2PoolProvider, }) {
         this.protocol = router_sdk_1.Protocol.MIXED;
         this.amount = amount;
@@ -137,6 +134,9 @@ class MixedRouteWithValidQuote {
                 : v2PoolProvider.getPoolAddress(p.token0, p.token1).poolAddress;
         });
         this.tokenPath = this.route.path;
+    }
+    toString() {
+        return `${this.percent.toFixed(2)}% QuoteGasAdj[${this.quoteAdjustedForGas.toExact()}] Quote[${this.quote.toExact()}] Gas[${this.gasEstimate.toString()}] = ${(0, routes_1.routeToString)(this.route)}`;
     }
 }
 exports.MixedRouteWithValidQuote = MixedRouteWithValidQuote;

@@ -182,13 +182,13 @@ var AVALANCHE_ADDRESSES = {
   swapRouter02Address: '0xbb00FF08d01D300023C629E8fFfFcb65A5a578cE'
 };
 var BASE_ADDRESSES = {
-  v3CoreFactoryAddress: '0x33128a8fC17869897dcE68Ed026d694621f6FDfD',
-  multicallAddress: '0x091e99cb1C49331a94dD62755D168E941AbD0693',
-  quoterAddress: '0x3d4e44Eb1374240CE5F1B871ab261CD16335B76a',
-  v3MigratorAddress: '0x23cF10b1ee3AdfCA73B0eF17C07F7577e7ACd2d7',
-  nonfungiblePositionManagerAddress: '0x03a520b32C04BF3bEEf7BEb72E919cf822Ed34f1',
-  tickLensAddress: '0x0CdeE061c75D43c82520eD998C23ac2991c9ac6d',
-  swapRouter02Address: '0x2626664c2603336E57B271c5C0b26F421741e481'
+  v3CoreFactoryAddress: '0xE82Fa4d4Ff25bad8B07c4d1ebd50e83180DD5eB8',
+  multicallAddress: '0x26669E89E975382A1C394fd7A34D5c1a3A8Ea51f',
+  quoterAddress: '0xcbf872c837bAd15b0a0283A5C5936FBD1b66BEaf',
+  v3MigratorAddress: '0x62A2a64FB4832359A0cb9a917eE75f793C512781',
+  nonfungiblePositionManagerAddress: '0x3f11feF6633f9aF950426fEe3eaE6e68943E28A0',
+  tickLensAddress: '0x7c1e2Bb1250cDd7650D41b121FF4f55AbF78C2dA',
+  swapRouter02Address: '0xE29A829a1C86516b1d24b7966AF14Eb1BE2cD5d4'
 };
 // Base Goerli v3 addresses
 var BASE_GOERLI_ADDRESSES = {
